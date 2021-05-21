@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<script type="text/javascript">
+<!--
+function sendMail() {
+var link = "espacio.abstracto.tienda@gmail.com"
++ "?cc=minina1980@hotmail.com"
++ "&subject=" + escape("Info Web")
++ "&body=" + escape("Mi nombre es: " + document.getElementById('name').value);
+
+var n = document.forms[0].name.value;
+var m = document.forms[0].mail.value;
+var t = document.getElementById("test");
+var filter = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
+if (n.length >= 2 && filter.test(m)) {window.location.href = "mailto:espacio.abstracto.tienda@gmail.com" +link; return true;}
+else {t.innerHTML="Revisa los datos . . ."; setTimeout(function(){t.innerHTML=". . ."}, 2000); return false;}
+}
+//-->
+</script>
+</head>
+<body background="imagen1.jpg" >
+<br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+<font color="#FFFFFF" size="4"><b>
+<table width="193" height="194" border="2" align="center" cellpadding="10" cellspacing="10">
+  <tr>
+    <td><form>
+  <label for="name">Tu Nombre</label>
+  <input type="text" id="name" name="name" value="">
+  <label for="telf">Tu Correo</label>
+  <input type="text" id="mail" name="mail" value="">
+  <label for="test" id="test">. . .</label>
+  <input name="button" type="button" onClick="sendMail(espacio.abstracto.tienda@gmail.com);this.blur()" value="C O N T A C T O">
+</form></td>
+  </tr>
+</table>
+</b></font>
+
+
+
+
+
+</body>
+</html>
